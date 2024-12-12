@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    //Incorrectly attempting to access a non-existent attribute
+    const myVariable = document.getElementById('myDiv').getAttribute('nonExistentAttribute');
+    console.log(myVariable); //This will output null
+    // The error is not directly visible, it might cause unexpected behavior in your application if you are not handling null values properly.
+  </script>
+</body>
+</html>
